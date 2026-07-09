@@ -46,4 +46,11 @@ jobs:
         id: deployment
 
         uses: actions/deploy-pages@v4
+- name: Install dependencies
+        run: npm install
 
+      - name: Fix permissions
+        run: chmod -R +x node_modules/.bin
+
+      - name: Build
+        run: npm run build

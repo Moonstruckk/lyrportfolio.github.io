@@ -7,7 +7,7 @@ const Home = () => {
 
       {/* Title */}
       <div className="mb-14">
-        <h1 className="text-5xl md:text-6xl font-serif tracking-wide text-text-main">
+        <h1 className="text-4xl md:text-5xl font-serif tracking-wide text-text-main">
           ABOUT ME
         </h1>
       </div>
@@ -15,7 +15,7 @@ const Home = () => {
 
       {/* Subtitle */}
       <div className="mb-16">
-        <p className="text-text-muted text-base md:text-lg">
+        <p className="text-text-muted text-sm md:text-base">
           2027届北京师范大学本科 · 汉语言文学专业（励耘实验班），拥有内容行业经验。
         </p>
       </div>
@@ -23,11 +23,11 @@ const Home = () => {
 
       {/* Main Intro */}
       <div className="mb-16 max-w-4xl">
-        <p className="text-xl md:text-2xl leading-relaxed text-text-main font-normal">
+        <p className="text-base md:text-lg leading-relaxed text-text-main">
           专注于人文、科技与叙事的交叉地带，主导完整内容开发流程——从知识框架搭建、书稿撰写、学术核校到成稿交付的全链路工作。
         </p>
 
-        <p className="mt-6 text-lg md:text-xl leading-relaxed text-text-main">
+        <p className="mt-6 text-base md:text-lg leading-relaxed text-text-main">
           同时具备品牌文案策划、学术论文研究、AI工具链开发等多方面能力，为文化传播、教育科技、学术出版等项目提供专业内容服务。
         </p>
       </div>
@@ -42,7 +42,7 @@ const Home = () => {
             className="
               border border-gray-300
               px-7 py-3
-              text-sm
+              text-xs
               tracking-wide
               text-text-muted
               hover:border-text-main
