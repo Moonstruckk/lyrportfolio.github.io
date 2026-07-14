@@ -416,7 +416,7 @@ section.highlightss &&
 
                   <a
                     key={file.name}
-                    href={file.url}
+                    href={`${import.meta.env.BASE_URL}${file.url.replace(/^\//, "")}`}
                     target="_blank"
                     rel="noreferrer"
                     className="
