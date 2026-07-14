@@ -17,7 +17,7 @@ link:"works/A-City-of-Sadness.html"
 
 
 {
-id:"wang-kar-wai",
+id:"Atonement",
 
 type:"书评",
 
