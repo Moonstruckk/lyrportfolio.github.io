@@ -1,0 +1,70 @@
+.side-nav {
+    position: fixed;
+    left: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    z-index: 100;
+}
+
+
+.side-nav a {
+
+    display: flex;
+    align-items: center;
+
+    width: 80px;
+    height: 30px;
+
+    cursor: pointer;
+
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+
+/* 横杠 */
+.side-nav a::before {
+
+    content:"";
+
+    display:block;
+
+    width:35px;
+    height:1px;
+
+    background:#aaa;
+
+    transition:all 0.3s ease;
+
+}
+
+
+
+/* 鼠标进入整个80×30区域 */
+.side-nav a:hover::before {
+
+    width:55px;
+    background:#222;
+
+    background:none !important;
+    padding:0 !important;
+
+}
+
+.side-nav a.active::before {
+
+    background:#222;
+
+    width:55px;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}

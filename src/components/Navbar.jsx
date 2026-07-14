@@ -24,8 +24,11 @@ const Navbar = () => {
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/90 backdrop-blur-md border-b border-border-color py-4' : 'bg-transparent py-6'}`}>
       <div className="max-w-6xl mx-auto px-6 flex justify-between items-center">
         {/* Logo / Name */}
-        <Link to="/" className="text-xl font-bold tracking-tighter uppercase">
-          Your Name
+        <Link to="/" className="text-xl
+    font-bold
+    tracking-[0.25em]
+    uppercase">
+          梁悦然
         </Link>
 
         {/* Nav Links */}

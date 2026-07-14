@@ -12,7 +12,7 @@ const Contact = () => {
       <div className="flex flex-col gap-6 items-center">
         <a href="mailto:yourname@example.com" className="flex items-center gap-3 text-xl hover:text-text-muted transition-colors">
           <Mail size={20} />
-          yourname@example.com
+          kazink@qq.com
         </a>
         <a href="https://github.com" target="_blank" rel="noreferrer" className="flex items-center gap-3 text-xl hover:text-text-muted transition-colors">
           <Github size={20} />

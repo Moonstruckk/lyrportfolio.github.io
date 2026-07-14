@@ -8,6 +8,8 @@ import Project from './pages/Project';
 import Papers from './pages/Papers';
 import Works from './pages/Works';
 import Contact from './pages/Contact';
+import ProjectDetail from './pages/ProjectDetail';
+
 
 function App() {
   return (
@@ -21,6 +23,7 @@ function App() {
           <Route path="/papers" element={<Papers />} />
           <Route path="/works" element={<Works />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/project/:id" element={<ProjectDetail />} />
         </Routes>
       </main>
       <Footer />
