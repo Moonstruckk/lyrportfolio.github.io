@@ -26,7 +26,7 @@ title:"《赎罪》：虚构的奋力尝试是一切的一切",
 desc:
 "讨论影像、记忆与都市经验之间的关系。",
 
-link:"/works/Atonement.html"
+link:"works/Atonement.html"
 },
 
 {
@@ -39,7 +39,7 @@ title:"《后殖民食物与爱情》：重播盛宴",
 desc:
 "讨论影像、记忆与都市经验之间的关系。",
 
-link:"/works/Postcolonial.html"
+link:"works/Postcolonial.html"
 },
 
 {
@@ -52,7 +52,7 @@ title:"《挪威的森林》：青春期症候群",
 desc:
 "讨论影像、记忆与都市经验之间的关系。",
 
-link:"/works/Norway.html"
+link:"works/Norway.html"
 },
 
 {
@@ -99,7 +99,7 @@ title:"聊赠一枝",
 desc:
 "讨论影像、记忆与都市经验之间的关系。",
 
-link:"/works/Liaozeng.html"
+link:"works/Liaozeng.html"
 },
 
 {
@@ -112,7 +112,7 @@ title:"去日苦多",
 desc:
 "讨论影像、记忆与都市经验之间的关系。",
 
-link:"/works/Quri.html"
+link:"works/Quri.html"
 },
 
 {
@@ -125,7 +125,7 @@ title:"庙食",
 desc:
 "讨论影像、记忆与都市经验之间的关系。",
 
-link:"/works/Miaoshi.html"
+link:"works/Miaoshi.html"
 },
 
 {
@@ -138,7 +138,7 @@ title:"耶弗他的女儿们",
 desc:
 "讨论影像、记忆与都市经验之间的关系。",
 
-link:"/works/Yefuta.html"
+link:"works/Yefuta.html"
 },
 
 {
@@ -151,7 +151,7 @@ title:"还似旧乡",
 desc:
 "讨论影像、记忆与都市经验之间的关系。",
 
-link:"/works/Huansi.html"
+link:"works/Huansi.html"
 },
 
 {
@@ -164,7 +164,7 @@ title:"灭谛者",
 desc:
 "讨论影像、记忆与都市经验之间的关系。",
 
-link:"/works/Miedi.html"
+link:"works/Miedi.html"
 },
 
 {
@@ -177,7 +177,7 @@ title:"公无渡河",
 desc:
 "讨论影像、记忆与都市经验之间的关系。",
 
-link:"/works/Gongwu.html"
+link:"works/Gongwu.html"
 },
 
 {
@@ -190,7 +190,7 @@ title:"海国图志",
 desc:
 "讨论影像、记忆与都市经验之间的关系。",
 
-link:"/works/Haiguo.html"
+link:"works/Haiguo.html"
 },
 
 {
@@ -203,7 +203,7 @@ title:"湄南河往事",
 desc:
 "讨论影像、记忆与都市经验之间的关系。",
 
-link:"/works/Meinan.html"
+link:"works/Meinan.html"
 },
 
 {
@@ -216,7 +216,7 @@ title:"道成肉身",
 desc:
 "讨论影像、记忆与都市经验之间的关系。",
 
-link:"/works/Daocheng.html"
+link:"works/Daocheng.html"
 },
 
 {
@@ -229,7 +229,7 @@ title:"沉疴",
 desc:
 "讨论影像、记忆与都市经验之间的关系。",
 
-link:"/works/AOT.html"
+link:"works/AOT.html"
 },
 
 {
@@ -242,7 +242,7 @@ title:"断桥",
 desc:
 "讨论影像、记忆与都市经验之间的关系。",
 
-link:"/works/Duanqiao.html"
+link:"works/Duanqiao.html"
 }
 
 
