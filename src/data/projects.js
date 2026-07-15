@@ -15,11 +15,11 @@ export const projects = [
     "中国现代文学馆是国内重要的现代文学研究与公共文化机构。实习期间，围绕文学展览、新媒体传播与公众文化推广展开内容策划工作，将文学研究成果转化为适用于展览空间、视频传播与数字媒介的叙事内容。",
 
   tags: [
-    "Exhibition Narrative",
-    "Copywriting",
-    "Cultural Communication",
-    "Literary Research"
-  ],
+  "展览叙事",
+  "文案策划",
+  "文化传播",
+  "文学研究"
+],
 
 
   cover:
@@ -187,11 +187,11 @@ export const projects = [
     "伴鱼教育科技是一家专注于数字教育与智能学习产品研发的互联网企业。实习期间参与小学语文课程内容研发工作，围绕课程资料整理、内容审核、教研支持与产品上线协作等环节，理解教育产品从教学设计到内容交付的完整流程。",
 
   tags: [
-    "EdTech",
-    "Curriculum Development",
-    "Content Editing",
-    "Teaching Materials"
-  ],
+  "教育科技",
+  "课程开发",
+  "内容编辑",
+  "教材研发"
+],
    cover:
     "/images/projects/banyu.png",
 
@@ -344,11 +344,11 @@ export const projects = [
 
 
   tags: [
-    "Academic Editing",
-    "Proofreading",
-    "Publishing",
-    "Text Quality Control"
-  ],
+  "学术编辑",
+  "校对审稿",
+  "出版流程",
+  "文字质量控制"
+],
 
 
 
