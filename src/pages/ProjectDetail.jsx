@@ -1,5 +1,6 @@
 import { useParams, Link, Navigate } from "react-router-dom";
 import { projects } from "../data/projects";
+const base = import.meta.env.BASE_URL;
 
 
 const ProjectDetail = () => {
@@ -96,6 +97,8 @@ project.cover && (
 
       {/* Sections */}
 
+      
+
 
       <div className="space-y-20">
 
@@ -125,6 +128,187 @@ project.cover && (
           </h3>
         )
         }
+        
+        {section.timeline && (
+  <div className="mt-16">
+    {section.timeline.map((item, index) => (
+      <div
+        key={index}
+        className="
+          grid grid-cols-[56px_1fr] md:grid-cols-[140px_1fr]
+          gap-x-6 md:gap-x-12
+          py-10
+          border-t border-border-color
+          first:border-t-0 first:pt-0
+        "
+      >
+        {/* 左栏：序号 + 分类标签 */}
+        <div className="pt-1">
+          <div className="font-serif font-light text-4xl md:text-5xl text-border-color leading-none mb-3">
+            {String(index + 1).padStart(2, '0')}
+          </div>
+          <div className="text-[10px] tracking-[0.3em] text-text-muted uppercase">
+            {item.tag}
+          </div>
+        </div>
+
+        {/* 右栏：内容 */}
+        <div className="max-w-3xl">
+          {/* 只有存在 title 时才渲染标题（第一项没有 title） */}
+          {item.title && (
+            <h3 className="text-xl md:text-2xl font-serif mb-5 text-text-main">
+              {item.title}
+            </h3>
+          )}
+
+          {/* 普通文字内容 —— 第一行作为身份声明，字号更大更重；其余作为支撑例子，更小更浅 */}
+{item.content && (
+  <div className="space-y-3 mb-6">
+    {item.content.map((text, i) =>
+      i === 0 ? (
+        <p
+          key={i}
+          className="text-base md:text-lg font-serif text-text-main leading-snug"
+        >
+          {text}
+        </p>
+      ) : (
+        <p
+          key={i}
+          className="text-sm text-text-muted leading-relaxed"
+        >
+          {text}
+        </p>
+      )
+    )}
+  </div>
+)}
+
+{/* 可选：多张配图（illustrations），在 timeline 某一项数据里加 illustrations 字段即可显示，一行两张，按 1444×783 比例适配 */}
+{item.illustrations && (
+  <div className="mb-6 grid grid-cols-2 gap-4 max-w-2xl">
+    {item.illustrations.map((src, i) => (
+      <div
+        key={i}
+        className="aspect-[1444/783] border border-border-color overflow-hidden"
+      >
+        <img
+          src={`${base}${src}`}
+          alt={`${item.title || item.tag} ${i + 1}`}
+          className="w-full h-full object-cover"
+        />
+      </div>
+    ))}
+  </div>
+)}
+
+          {/* 五张窄竖图 —— 策划思路板块专用，同一行排列 */}
+{item.images && (
+  <div className="flex gap-3">
+    {item.images.map((img, i) => (
+      <div
+        key={i}
+        className="flex-1 aspect-[2.5/5] bg-bg-alt border border-border-color flex items-center justify-center overflow-hidden"
+      >
+        {img.src ? (
+          <img
+            src={img.src}
+            alt={img.alt || ''}
+            className="w-full h-full object-cover"
+          />
+        ) : (
+          <span className="text-[10px] text-text-muted">图 {i + 1}</span>
+        )}
+      </div>
+    ))}
+  </div>
+)}
+
+          {/* 工作流程 —— 数字序号 + 每项下方可自由添加图片/说明文字/卡片/图集 */}
+          {item.steps && (
+            <div className="space-y-10">
+              {item.steps.map((step, i) => (
+                <div key={i} className="flex gap-4">
+                  <div className="text-sm text-text-muted font-serif shrink-0">
+                    {String(i + 1).padStart(2, '0')}
+                  </div>
+                  <div className="flex-1">
+                    <p className="text-sm md:text-base text-text-main">
+                      {step.label}
+                    </p>
+
+                    {/* 可选：说明文字，在 steps 数据里给某一项加 note 字段即可显示 */}
+                    {step.note && (
+                      <p className="text-sm text-text-muted mt-2 leading-relaxed max-w-xl">
+                        {step.note}
+                      </p>
+                    )}
+
+                    {/* 可选：单张配图（如脚本目录图），在 steps 数据里给某一项加 image 字段即可显示 */}
+                    {step.image && (
+                      <div className="mt-3 w-full max-w-md border border-border-color overflow-hidden">
+                        <img
+                          src={`${base}${step.image}`}
+                          alt={step.label}
+                          className="w-full h-auto object-cover"
+                        />
+                      </div>
+                    )}
+
+                    {/* 可选：展品说明词卡片，在 steps 数据里给某一项加 cards: [{ badge, text }, ...] 字段即可显示，支持并排两张 */}
+                    {step.cards && (
+                      <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        {step.cards.map((card, ci) => (
+                          <div
+                            key={ci}
+                            className="border border-border-color p-5 bg-bg-alt"
+                          >
+                            <span className="inline-block text-xs tracking-[0.15em] text-text-muted uppercase border border-border-color px-2.5 py-1 mb-3">
+                              {card.badge}
+                            </span>
+                            <p className="text-sm text-text-main leading-relaxed">
+                              {card.text.map((segment, si) =>
+                                segment.bold ? (
+                                  <strong key={si} className="font-bold text-text-main">
+                                    {segment.t}
+                                  </strong>
+                                ) : (
+                                  <span key={si}>{segment.t}</span>
+                                )
+                              )}
+                            </p>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+
+                    {/* 可选：多图图集（如布展成果），在 steps 数据里给某一项加 gallery: [] 字段即可显示 */}
+                    {step.gallery && (
+                      <div className="mt-4 grid grid-cols-2 gap-4 max-w-2xl">
+                        {step.gallery.map((src, gi) => (
+                          <div
+                            key={gi}
+                            className="aspect-[4/3] border border-border-color overflow-hidden"
+                          >
+                            <img
+                              src={`${base}${src}`}
+                              alt={`${step.label} ${gi + 1}`}
+                              className="w-full h-full object-cover"
+                            />
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
+    ))}
+  </div>
+)}
 
 
 
@@ -348,15 +532,21 @@ section.highlightss &&
 
 
             <div
-              key={item.title}
-              className="
-              border
-              p-8
-              "
-            >
+key={item.title}
+className="
+border
+p-8
+bg-bg-alt
+"
+>
 
 
-              <h3 className="text-xl font-serif mb-4">
+              <h3 className="
+text-xl
+font-serif
+mb-4
+tracking-wide
+">
                 {item.title}
               </h3>
 

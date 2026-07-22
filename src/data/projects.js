@@ -1,3 +1,4 @@
+const base = import.meta.env.BASE_URL;
 export const projects = [
  {
   id: "modern-literature-museum",
@@ -31,42 +32,95 @@ export const projects = [
 
     
 
+  {
+  type: "timeline",
+
+  title: "01 / 展览文案策划",
+
+  subtitle:
+    "《春蚕丝不尽 子夜到黎明——纪念茅盾先生诞辰130周年特展》文案独立策划人",
+
+  timeline: [
+  {
+  tag: "INNOVATION",
+  title: "创新展览形式",
+  content: [
+    "Example -  为方便观众理解小说《子夜》里错综复杂的资本博弈，与团队共同设计一套基于自然语言处理的NLP知识图谱触摸屏：提取小说文本中的人物、工厂、资本流向等实体关系，将《子夜》里的人物关系、资本流向做成可交互网络图。"
+  ],
+  illustrations: [
+    "images/projects/maodun-nlp-graph1.png",
+    "images/projects/maodun-nlp-graph2.png"
+  ]
+},
+  {
+    title: '策划思路：从“作家介绍”到“时代叙事”',
+    tag: "STRATEGY",
+    content: [
+      "传统人物展览容易停留于生平罗列。本项目以文学作品与时代经验为线索，将个人创作历程置于20世纪中国文学发展脉络中。"
+    ],
+    images: [
+  { src: `${base}images/projects/maoduntitle00.png`, alt: "引子" },
+  { src: `${base}images/projects/maoduntitle01.png`, alt: "第一章" },
+  { src: `${base}images/projects/maoduntitle02.png`, alt: "第二章" },
+  { src: `${base}images/projects/maoduntitle03.png`, alt: "第三章" },
+  { src: `${base}images/projects/maoduntitle04.png`, alt: "第四章" }
+]
+    
+  },
+  {
+    title: "工作流程",
+    tag: "PROCESS",
+    steps: [
+      {
+        label: "资料搜集",
+        note: "整理展览相关的公开出版物、研究资料与既有陈列内容，作为文案撰写的信息基础。"
+      },
+      {
+        label: "文学史研究与文本分析",
+        note: "梳理茅盾各阶段代表作品与所处时代背景的关联，提炼可用于公众叙事的核心线索。"
+      },
+      {
+        label: "展览主题拆解",
+        note: "将研究成果拆解为可视化的展览单元与分区逻辑，形成叙事框架雏形。"
+      },
+      {
+        label: "文案框架搭建",
+        image: "images/projects/茅盾目录.png"
+      },
+      {
+  label: "文字撰写与修改",
+  cards: [
     {
-      type: "text",
-
-      title: "01 / 展览文案",
-
-      subtitle:
-        "《春蚕丝不尽 子夜到黎明——纪念茅盾先生诞辰130周年特展》",
-
-
-      content:
-        "独立负责该特展展览文案策划，将文学研究成果转化为面向公众的展览叙事，构建从文学文本到空间展示的内容逻辑。",
-
-      
-      highlights:[
-        "展览主题与单元文字策划",
-        "文学史料整理与文本转化",
-        "展品说明及展陈语言设计"
-      ],
-
-
-      collaboration:
-        "与中央戏剧学院舞台设计专业张华翔教授共同参与设计，对接文学内容与空间视觉呈现需求。",
-
-
-      files:[
-        {
-          name:"展览文案 PDF",
-          url:"/files/茅盾展览文案_梁悦然.pdf"
-        },
-
-        {
-          name:"设计文件 PDF",
-          url:"/files/茅盾展览设计文件_梁悦然.pdf"
-        }
+      badge: "《立报·言林》连载《你往哪里跑？》的原版报纸",
+      text: [
+        { t: "说明词：", bold: true },
+        { t: "茅盾的《你往哪里跑》直击抗战初期每个中国人的灵魂拷问——你往哪里跑？是逃避苟安，还是挺身救国？" }
       ]
     },
+    {
+      badge: "茅盾晚年写的《可爱的故乡》",
+      text: [
+        { t: "说明词：", bold: true },
+        { t: "吴越文化兼具海纳百川的包容性、勇于创新的进取性以及崇文重教的人文性特质，王国维、章太炎、蔡元培、鲁迅为其近代杰出代表。茅盾深得这一传统文化的滋养，内敛外张，将这份浸入血脉的乡愁与精神底色，凝结成这篇情真意切的《可爱的故乡》。" }
+      ]
+    }
+  ]
+},
+      {
+        label: "配合展陈呈现",
+        note: "与中央戏剧学院舞台设计专业张华翔教授对接文学内容逻辑与空间视觉呈现需求。",
+        gallery: [
+          "images/projects/展陈1.jpg",
+          "images/projects/展陈2.jpg",
+          "images/projects/展陈3.jpg",
+          "images/projects/展陈4.jpg"
+        ]
+      }
+    ]
+  }
+],
+
+},
 
 
 
